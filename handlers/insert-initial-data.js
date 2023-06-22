@@ -50,7 +50,7 @@ exports.productSchema = new mongoose_1.default.Schema({
 const ProductModel = mongoose_1.default.model("Products", exports.productSchema);
 function seedProducts() {
     return __awaiter(this, void 0, void 0, function* () {
-        const dataPath = path_1.default.join(__dirname, "../..", "data.json");
+        const dataPath = path_1.default.join(__dirname, "../", "data.json");
         const initialData = JSON.parse(fs_1.default.readFileSync(dataPath, "utf8"));
         const count = yield ProductModel.countDocuments();
         if (count == 0) {
