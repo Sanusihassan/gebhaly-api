@@ -14,12 +14,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const mongoose_1 = __importDefault(require("mongoose"));
-const insert_initial_data_1 = require("./handlers/insert-initial-data");
-const get_documents_1 = require("./handlers/get-documents");
-const add_to_cart_1 = require("./handlers/add-to-cart");
-const update_item_quantity_1 = require("./handlers/update-item-quantity");
-const delete_cart_item_1 = require("./handlers/delete-cart-item");
-const get_cart_1 = require("./handlers/get-cart");
+const insert_initial_data_1 = require("../../handlers/insert-initial-data");
+const get_documents_1 = require("../../handlers/get-documents");
+const add_to_cart_1 = require("../../handlers/add-to-cart");
+const update_item_quantity_1 = require("../../handlers/update-item-quantity");
+const delete_cart_item_1 = require("../../handlers/delete-cart-item");
+const get_cart_1 = require("../../handlers/get-cart");
 const cors_1 = __importDefault(require("cors"));
 const mongoUrl = 'mongodb+srv://sanusihassan122:lmXDegosOY6OKghx@cluster0.oyj3h0y.mongodb.net/shop?retryWrites=true&w=majority';
 const app = (0, express_1.default)();
@@ -73,5 +73,5 @@ app.delete('/delete-cart-item/:itemId', (req, res) => __awaiter(void 0, void 0, 
 }));
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
-    console.log('Server listening on port port');
+    console.log('Server listening on port ' + port);
 });

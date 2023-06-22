@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'gebhaly-api'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0E7F7824AB314FB9BC85C90DB7A8A84C }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_FE27F03D8DA74E7397FDA037E65789EB }}
           package: .
