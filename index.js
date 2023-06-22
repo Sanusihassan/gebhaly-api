@@ -71,6 +71,7 @@ app.delete('/delete-cart-item/:itemId', (req, res) => __awaiter(void 0, void 0, 
         res.sendStatus(500);
     }
 }));
-app.listen(5000, () => {
-    console.log('Server listening on port 5000');
+const port = process.env.PORT || 5000;
+app.listen(port, () => {
+    console.log('Server listening on port port');
 });
